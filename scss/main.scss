@@ -89,6 +89,10 @@ body {
     }
 }
 
+.menu ul a.logo-main {
+    border: none;
+}
+
 .about__content {
     height: 228px;
     align-self: flex-end;
@@ -206,6 +210,7 @@ body {
     right: 32%;
     z-index: 3;
     outline: none;
+    transition: .3s;
 
     &::after {
         content: '';
@@ -216,6 +221,10 @@ body {
         height: 22px;
         background: url('../img/prev-arrow.png') no-repeat 50% 50%;
         background-size: cover;
+    }
+
+    &:hover {
+        outline: 1px solid #fff;
     }
 
 }
@@ -230,6 +239,7 @@ ul.slick-dots {
     justify-content: center;
     position: relative;
     top: -55px;
+
     li button {
         background-color: transparent;
         border: 1px solid #fff;
@@ -242,8 +252,77 @@ ul.slick-dots {
     }
 }
 
-ul.slick-dots li.slick-active button  {
+ul.slick-dots li.slick-active button {
     background-color: #fff;
+}
+
+.footer {
+    width: 977px;
+    margin: 0 auto;
+
+    a {
+        color: #292929;
+    }
+}
+
+.footer__top,
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer__top {
+    align-items: center;
+    padding: 37px 0 20px;
+}
+
+.footer__top .mail {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -42px;
+        width: 33px;
+        height: 33px;
+        background: url('../img/mail.png') no-repeat 50% 50%;
+
+    }
+}
+
+.footer__bottom {
+    align-items: center;
+    padding: 20px 0;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.footer__bottom-left {
+    width: 480px;
+
+    p:first-child {
+        padding-bottom: 8px;
+    }
+}
+
+.politica-link {
+    margin-left: 8px;
+    a {
+        text-decoration: underline;
+    }
+}
+
+
+.promo-kontur {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
 }
 
 
@@ -262,4 +341,7 @@ ul.slick-dots li.slick-active button  {
 
 
 
-    @import 'media';
+
+
+
+@import 'media';
